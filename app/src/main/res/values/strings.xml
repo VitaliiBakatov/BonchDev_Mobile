@@ -1,10 +1,9 @@
 <resources>
-    <string name="app_name">Hw2</string>
+    <string name="app_name">Hw3</string>
     <string name="kek">Kek</string>
     <string name="pictureforfun">PictureForFun</string>
     <string name="email">Email</string>
     <string name="login">Войти</string>
-    <string name="simple_gmail_com">simple@gmail.com</string>
     <string name="password">Пароль</string>
     <string name="login_no_account">Нет аккаунта? Зарегайся!</string>
     <string name="lol">Лол</string>
@@ -13,4 +12,6 @@
     <string name="password2">Потверждение пароля</string>
     <string name="registration">Регистрация</string>
     <string name="login_account">Уже есть аккаунт? Войти</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

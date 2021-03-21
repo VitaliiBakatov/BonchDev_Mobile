@@ -1,4 +1,4 @@
-package com.example.hw2
+package com.example.hw3
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.hw2.SignInActivity">
+    android:orientation="vertical">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -16,14 +15,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingHorizontal="32dp"
-            android:paddingTop="32dp">
+            android:paddingHorizontal="32dp">
 
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:text="@string/lol"
                 android:textColor="@color/Green3"
                 android:textSize="32sp"
@@ -34,7 +31,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="32dp"
-                android:layout_weight="2" />
+                android:layout_weight="1" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -42,20 +39,18 @@
                 android:layout_weight="10"
                 android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/email"
-                    android:textSize="12sp" />
-
-                <EditText
-                    android:id="@+id/mail"
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawableEnd="@drawable/ic_baseline_email_24"
-                    android:hint="@string/simple_gmail_com"
-                    android:importantForAutofill="no"
-                    android:inputType="text" />
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/mail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/ic_baseline_email_24"
+                        android:hint="@string/email"
+                        android:importantForAutofill="no"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <EditText
                     android:id="@+id/firstName"
@@ -84,7 +79,7 @@
                     android:drawableEnd="@drawable/ic_twotone_lock_24"
                     android:hint="@string/password"
                     android:importantForAutofill="no"
-                    android:inputType="text"
+                    android:inputType="textPassword"
                     tools:ignore="TextFields" />
 
                 <EditText
@@ -95,7 +90,7 @@
                     android:drawableEnd="@drawable/ic_twotone_lock_open_24"
                     android:hint="@string/password2"
                     android:importantForAutofill="no"
-                    android:inputType="text"
+                    android:inputType="textPassword"
                     tools:ignore="TextFields" />
 
                 <Button

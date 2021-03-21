@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.hw2.SignInActivity">
+    android:orientation="vertical">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -33,7 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="16dp"
-                android:layout_weight="3" />
+                android:layout_weight="1" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -49,17 +48,12 @@
                     android:src="@drawable/pictureforfun"
                     tools:layout_editor_absoluteX="16dp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/email"
-                    android:textSize="12sp" />
 
                 <EditText
                     android:id="@+id/mail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/simple_gmail_com"
+                    android:hint="@string/email"
                     android:importantForAutofill="no"
                     android:inputType="text" />
 
@@ -69,7 +63,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/password"
                     android:importantForAutofill="no"
-                    android:inputType="text"
+                    android:inputType="textPassword"
                     tools:ignore="TextFields" />
 
                 <Button
