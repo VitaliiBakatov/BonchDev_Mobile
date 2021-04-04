@@ -14,4 +14,7 @@
     <string name="login_account">Уже есть аккаунт? Войти</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="input_msg">Напиши сюда…</string>
+    <string name="str2">Просто надпись</string>
+    <string name="full_name">Имя Фамилия</string>
 </resources>

@@ -8,4 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="Green3">#6FCF97</color>
+    <color name="divider">#212121</color>
+    <color name="sender">#6FCF97</color>
+    <color name="receiver">#8A8A8A</color>
 </resources>

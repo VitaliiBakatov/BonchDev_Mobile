@@ -33,8 +33,9 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="ic_baseline_person_24" />
-                            <entry key="sourceFile" value="C:\Users\Vitaly\Downloads\Icons Colorizer.svg" />
+                            <entry key="assetSourceType" value="FILE" />
+                            <entry key="outputName" value="ic_union" />
+                            <entry key="sourceFile" value="C:\Users\Vitaly\Downloads\Union.svg" />
                           </map>
                         </option>
                       </PersistentState>
