@@ -1,9 +1,10 @@
-package com.example.hw4
+package com.example.hw5
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.hw4.databinding.ActivityChatBinding
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
+import com.example.hw5.databinding.ActivityChatBinding
 
 
 class MainActivity : AppCompatActivity() {
@@ -17,10 +18,15 @@ class MainActivity : AppCompatActivity() {
         val adapter = ChatRvAdapter()
         binding.chatRv.adapter = adapter
 
+        val model: ChatViewModel = ViewModelProviders.of(this).get(ChatViewModel::class.java)
+        model.data.observe(this, Observer {
+            adapter.updateItems(it)
+        })
+
         binding.sendMsgIv.setOnClickListener {
             val msg = binding.msgEt.text.toString()
             if (!msg.isEmpty()) {
-                adapter.addItem(msg.trim())
+                model.updateMessageList(msg)
                 binding.msgEt.setText("")
                 binding.chatRv.smoothScrollToPosition(adapter.itemCount - 1)
             }

@@ -1,31 +1,17 @@
-package com.example.hw4
+package com.example.hw5
 
-import android.os.Handler
-import android.os.Looper
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.hw4.databinding.SnippetReceiveBinding
-import com.example.hw4.databinding.SnippetSendBinding
+import com.example.hw5.databinding.SnippetReceiveBinding
+import com.example.hw5.databinding.SnippetSendBinding
 import java.lang.IllegalArgumentException
 import kotlin.random.Random
 
-class ChatRvAdapter(private val list: MutableList<ItemChat> = mutableListOf()) :
+class ChatRvAdapter() :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-    private val msgFromReceiver = arrayOf(
-        "Кек",
-        "Лол",
-        "Бидон",
-        "Лупа",
-        "Пупа",
-        "Привет",
-        "Пока",
-        "Я твой собеседник и у меня облачко сообщения немного другое!",
-        "Ладно",
-        "Смотри прикол покажу",
-        "Хачите прикол??",
-        "Кто прочитал, тот здохнет"
-    )
+
+    private val list: MutableList<ItemChat> = mutableListOf()
 
     inner class SendViewHolder(private val binding: SnippetSendBinding) :
         RecyclerView.ViewHolder(binding.root) {
@@ -64,10 +50,9 @@ class ChatRvAdapter(private val list: MutableList<ItemChat> = mutableListOf()) :
 
     override fun getItemCount() = list.size
 
-    fun addItem(msg: String) {
-        list.add(ItemChat(msg, true))
-        list.add(ItemChat(msgFromReceiver[Random.nextInt(msgFromReceiver.size)], false))
-        list.add(ItemChat(msgFromReceiver[Random.nextInt(msgFromReceiver.size)], false))
+    fun updateItems(listItem: List<ItemChat>) {
+        list.clear()
+        list.addAll(listItem)
         notifyDataSetChanged()
     }
 }
