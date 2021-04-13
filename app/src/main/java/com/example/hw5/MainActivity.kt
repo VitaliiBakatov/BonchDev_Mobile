@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         val model: ChatViewModel = ViewModelProviders.of(this).get(ChatViewModel::class.java)
         model.data.observe(this, Observer {
             adapter.updateItems(it)
+            binding.chatRv.smoothScrollToPosition(adapter.itemCount - 1)
         })
 
         binding.sendMsgIv.setOnClickListener {
@@ -28,7 +29,6 @@ class MainActivity : AppCompatActivity() {
             if (!msg.isEmpty()) {
                 model.updateMessageList(msg)
                 binding.msgEt.setText("")
-                binding.chatRv.smoothScrollToPosition(adapter.itemCount - 1)
             }
         }
     }

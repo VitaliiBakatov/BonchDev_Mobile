@@ -1,5 +1,7 @@
 package com.example.hw5
 
+import android.os.Handler
+import android.os.Looper
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import kotlin.random.Random
@@ -24,10 +26,18 @@ class ChatViewModel : ViewModel() {
     var data: MutableLiveData<MutableList<ItemChat>> = MutableLiveData()
 
     fun updateMessageList(message: String) {
-        val list = data.value  ?: mutableListOf()
+        val handler = Handler(Looper.getMainLooper())
+        val list = data.value ?: mutableListOf()
         list.add(ItemChat(message, true))
-        list.add(ItemChat(msgFromReceiver[Random.nextInt(msgFromReceiver.size)], false))
-        list.add(ItemChat(msgFromReceiver[Random.nextInt(msgFromReceiver.size)], false))
         data.value = list
+        handler.postDelayed({
+            list.add(ItemChat(msgFromReceiver[Random.nextInt(msgFromReceiver.size)], false))
+            data.value = list
+            handler.postDelayed({
+                list.add(ItemChat(msgFromReceiver[Random.nextInt(msgFromReceiver.size)], false))
+                data.value = list
+            }, 500)
+        }, 500)
+
     }
 }
