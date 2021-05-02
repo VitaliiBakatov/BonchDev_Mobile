@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Hw5</string>
+    <string name="app_name">Hw6</string>
     <string name="kek">Kek</string>
     <string name="pictureforfun">PictureForFun</string>
     <string name="email">Email</string>
@@ -17,4 +17,10 @@
     <string name="input_msg">Напиши сюда…</string>
     <string name="str2">Просто надпись</string>
     <string name="full_name">Имя Фамилия</string>
+    <string name="albums">Albums</string>
+    <string name="create_post">Create Post</string>
+    <string name="users">Users</string>
+    <string name="Crete">Создать</string>
+    <string name="title">Title</string>
+    <string name="body">Body</string>
 </resources>

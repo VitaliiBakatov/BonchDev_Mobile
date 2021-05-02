@@ -1,12 +1,11 @@
-package com.example.hw5
+package com.example.hw6
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.hw5.databinding.SnippetReceiveBinding
-import com.example.hw5.databinding.SnippetSendBinding
+import com.example.hw6.databinding.SnippetReceiveBinding
+import com.example.hw6.databinding.SnippetSendBinding
 import java.lang.IllegalArgumentException
-import kotlin.random.Random
 
 class ChatRvAdapter() :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {

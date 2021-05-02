@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MenuFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <Button
+        android:layout_gravity="center"
+        android:id="@+id/albums"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:text="@string/albums"/>
+    <Button
+        android:layout_gravity="center"
+        android:id="@+id/users"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:text="@string/users"/>
+    <Button
+        android:layout_gravity="center"
+        android:id="@+id/create_post"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:text="@string/create_post"/>
+
+</LinearLayout>

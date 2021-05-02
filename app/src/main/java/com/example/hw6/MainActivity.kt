@@ -1,10 +1,10 @@
-package com.example.hw5
+package com.example.hw6
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import com.example.hw5.databinding.ActivityChatBinding
+import com.example.hw6.databinding.ActivityChatBinding
 
 
 class MainActivity : AppCompatActivity() {
